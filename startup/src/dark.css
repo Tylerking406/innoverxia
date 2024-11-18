@@ -1,0 +1,33 @@
+/* dark.css */
+body {
+    background-color: #14121d;
+    color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    background-color: #040406;
+  }
+  
+  .nav-item {
+    color: #ffffff;
+  }
+  
+  .nav-item:hover {
+    color: #b968c7;
+  }
+  
+  /* Optional: Add styles for buttons, links, etc. */
+  button {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #444444;
+  }
+  

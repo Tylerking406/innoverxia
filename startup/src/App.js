@@ -1,37 +1,22 @@
-import { Tabs } from 'antd';
-import 'antd/dist/reset.css'; // Ant Design styles
 import React from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Navigation from './Navigation';
+import Contact from './Tabs/Contact';
+import Home from './Tabs/Home';
+import Services from './Tabs/Services';
+import './dark.css';
 
-const onChange = (key) => {
-  console.log(key);
-};
-const items = [
-  {
-    key: '1',
-    label: 'Tab 1',
-    children: 'Content of Tab Pane 1',
-  },
-  {
-    key: '2',
-    label: 'Tab 2',
-    children: 'Content of Tab Pane 2',
-  },
-  {
-    key: '3',
-    label: 'Tab 3',
-    children: 'Content of Tab Pane 3',
-  },
-];
-
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1>Ant Design Tabs Example</h1>
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
-    </div>
-   
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
