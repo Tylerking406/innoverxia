@@ -1,4 +1,3 @@
-/* General Styles */
 .home-container {
   display: flex;
   flex-direction: column;
@@ -91,6 +90,21 @@
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #e57373;
+.info-section a {
+  color: blue; /* Match your site's accent color */
+  text-decoration: none;
+  border-bottom: 1px dashed #0a95e0;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
+
+.info-section a:hover {
+  color: lightblue; /* Hover color */
+  border-bottom-color: lightblue;
+}
+
+
+.cta-button:hover {
+  background-color: lightblue;
+}
+
+

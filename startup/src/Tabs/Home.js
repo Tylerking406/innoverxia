@@ -23,7 +23,9 @@ const Home = () => {
         <h3>Why Choose Innovexia?</h3>
         <p>
           At Innovexia, we specialize in providing cutting-edge solutions to bring your ideas to life.
-          Whether you need a website, system design, or user-centric platforms, we’ve got you covered.
+          Whether you need a <a href="https://en.wikipedia.org/wiki/Website" target="_blank" rel="noopener noreferrer">website</a>,
+          <a href="https://en.wikipedia.org/wiki/Systems_design" target="_blank" rel="noopener noreferrer">system design</a>,
+          or user-centric platforms, we’ve got you covered.
         </p>
         <button className="cta-button">Learn More</button>
       </div>
