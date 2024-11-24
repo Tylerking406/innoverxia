@@ -57,7 +57,7 @@
   }
   
   .contact-card a:hover {
-    color: #ffd700;
+    color: #b968c7;
   }
   
   /* Contact Form */
@@ -112,5 +112,17 @@
   .submit-button:hover {
     background-color: #e57373;
     transform: scale(1.05);
+  }
+  
+  .contact-card i {
+    color: #b968c7; /* Brand color for icons */
+    margin-right: 8px;
+    font-size: 1.2rem;
+  }
+  
+  .contact-card p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
   }
   
