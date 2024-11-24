@@ -80,9 +80,12 @@ const Home = () => {
         <p>
           Let Innovexia bring your vision to life with innovative solutions tailored to your goals.
         </p>
-        <button className="cta-button">
+        {/* <button
+          className="cta-button"
+          onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+        >
           Get Started <i className="fas fa-arrow-right"></i>
-        </button>
+        </button> */}
       </div>
     </div>
   );

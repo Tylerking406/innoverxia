@@ -54,15 +54,15 @@ const Contact = () => {
         <form>
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your full name" required />
+            <input type="text" id="name" placeholder="Enter your full name" aria-label="Enter your full name" required />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email address" required />
+            <input type="email" id="email" placeholder="Enter your email address" aria-label="Enter your email address" required />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+            <textarea id="message" rows="5" placeholder="Enter your message"  aria-label="Enter your message" required></textarea>
           </div>
           <button type="submit" className="submit-button">Send Message</button>
         </form>
