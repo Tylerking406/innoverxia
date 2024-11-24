@@ -49,6 +49,14 @@
 .developer-svg {
   max-width: 100%;
   height: auto;
+  box-shadow: 0 0 25px #b968c7;
+  border-radius: 30%;
+}
+
+.developer-svg:hover {
+  box-shadow: 0 0 25px #b968c7,
+              0 0 50px #b968c7,
+              0 0 100px #b968c7
 }
 
 /* About Us Section */
