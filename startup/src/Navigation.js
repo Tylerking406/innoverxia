@@ -1,20 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './nav.css'; // Import the CSS for styling
 
 const Navigation = () => {
   return (
     <nav className="navbar">
       <div className="nav-links">
-            <Link to="/" className="nav-item">
-            Home
-            </Link>
-            <Link to="/contact" className="nav-item">
-            Contact
-            </Link>
-            <Link to="/services" className="nav-item">
-            Services
-            </Link>
+        <NavLink exact to="/" className="nav-item" activeClassName="active">
+          <i className="fas fa-home"></i> Home
+        </NavLink>
+        <NavLink to="/contact" className="nav-item" activeClassName="active">
+          <i className="fas fa-envelope"></i> Contact
+        </NavLink>
+        <NavLink to="/services" className="nav-item" activeClassName="active">
+          <i className="fas fa-concierge-bell"></i> Services
+        </NavLink>
       </div>
     </nav>
   );

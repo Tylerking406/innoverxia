@@ -22,14 +22,19 @@ const Contact = () => {
               linkedin.com/in/arinao-ndou
             </a>
           </p>
+          <p>
+            Associated with: <a href="https://www.linkedin.com/company/tata-imali-169/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+            Tata-iMali
+            </a>
+          </p>
         </div>
 
         {/* Thimna's Contact Card */}
         <div className="contact-card">
           <h3>Thimna Shushu</h3>
           <p>Co-Founder</p>
-          <p>Email: <a href="mailto:thimnashushu@example.com">thimnashushu@example.com</a></p>
-          <p>Phone: <a href="tel:+27840000000">+27 84 000 0000</a></p>
+          <p>Email: <a href="mailto:thimnashushu@gmail.com">thimnashushu@gmail.com</a></p>
+          <p>Phone: <a href="tel:+27828647297">+27 82 864 7297</a></p>
           <p>
             LinkedIn: <a href="https://www.linkedin.com/in/thimna-shushu" target="_blank" rel="noopener noreferrer">
               linkedin.com/in/thimna-shushu

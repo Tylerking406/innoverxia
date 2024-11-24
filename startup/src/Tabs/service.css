@@ -1,51 +1,83 @@
+/* General Styling */
 .serviceContent {
-    /* padding: 50px;
-    text-align: center; */
-    background-color: #14121d;
-    color: #ffffff;
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  .serviceContent p{
-    color: white;
-  }
-  
-  .serviceContent h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .serviceContent h2 span {
-    color: #b968c7;
-  }
-  
-  .serviceContent p {
-    
-    margin-bottom: 40px;
-  }
-  
-  .services-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
-  .service-card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(255, 253, 253, 0.84);
-    text-align: left;
-  }
-  
-  .service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #b968c7;
-  }
-  
-  .service-card p {
-    font-size: 1rem;
-    color: black;
-  }
-  
+  padding: 50px;
+  background-color: #121212; /* Black background */
+  color: #ffffff;
+  text-align: center;
+}
+
+.serviceContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.serviceContent .highlight {
+  color: #b968c7; /* Purple for branding */
+}
+
+.serviceContent p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #cccccc; /* Light gray for secondary text */
+}
+
+/* Services Section */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.service-card {
+  background-color: #1f1f1f; /* Slightly lighter black for contrast */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
+}
+
+.service-card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #b968c7;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #d3d3d3;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #b968c7;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <div className="serviceContent">
       <h2>
-        Let me introduce <span>Innovexia</span>
+        Let me introduce <span className="highlight">Innovexia</span>
       </h2>
       <p>
         At Innovexia, we specialize in delivering innovative solutions that
@@ -16,7 +16,11 @@ const Services = () => {
 
       {/* Services Section */}
       <div className="services-list">
+        {/* Service Card 1 */}
         <div className="service-card">
+          <div className="icon">
+            <i className="fas fa-laptop-code"></i>
+          </div>
           <h3>Web Design and Hosting</h3>
           <p>
             Professional website design and reliable hosting solutions tailored
@@ -25,7 +29,11 @@ const Services = () => {
           </p>
         </div>
 
+        {/* Service Card 2 */}
         <div className="service-card">
+          <div className="icon">
+            <i className="fas fa-cogs"></i>
+          </div>
           <h3>Systems Design and Analysis</h3>
           <p>
             Custom systems to streamline your business processes. We analyze
@@ -33,7 +41,11 @@ const Services = () => {
           </p>
         </div>
 
+        {/* Service Card 3 */}
         <div className="service-card">
+          <div className="icon">
+            <i className="fas fa-pencil-ruler"></i>
+          </div>
           <h3>UX/UI Design</h3>
           <p>
             Creating user-centric designs to ensure a seamless and enjoyable
@@ -42,7 +54,11 @@ const Services = () => {
           </p>
         </div>
 
+        {/* Service Card 4 */}
         <div className="service-card">
+          <div className="icon">
+            <i className="fas fa-users"></i>
+          </div>
           <h3>Customer Engagement Platforms</h3>
           <p>
             Develop tools that boost customer interaction, such as chatbots,
