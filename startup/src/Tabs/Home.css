@@ -105,6 +105,15 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
+.expertise-card:hover {
+  background: white;
+  color: #b968c7;
+  border: #b968c7;
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #b968c7;
+             
+}
+
 .expertise-card h4 {
   font-size: 1.2rem;
   color: #b968c7;
