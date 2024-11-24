@@ -4,6 +4,8 @@
   background-color: #121212; /* Black background */
   color: #ffffff;
   text-align: center;
+  background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+
 }
 
 .serviceContent h2 {
@@ -31,11 +33,12 @@
 }
 
 .service-card {
-  background-color: #1f1f1f; /* Slightly lighter black for contrast */
+ 
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 6px whitesmoke;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

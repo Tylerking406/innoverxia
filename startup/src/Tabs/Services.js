@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <div className="serviceContent">
       <h2>
-        Let me introduce <span className="highlight">Innovexia</span>
+        Let Us introduce <span className="highlight">Innovexia</span>
       </h2>
       <p>
         At Innovexia, we specialize in delivering innovative solutions that

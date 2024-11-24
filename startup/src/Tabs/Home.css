@@ -6,6 +6,7 @@
   padding: 50px;
   color: #ffffff;
   background-color: #121212; /* Black background */
+  background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
 }
 
 /* Main Content */
@@ -32,6 +33,31 @@
   font-style: italic;
   margin-bottom: 20px;
 }
+.textAnimate {
+  font-size: 1.5rem; /* Adjust size as needed */
+  color: #b968c7;
+  overflow: hidden; /* Ensures no text goes outside the container */
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  border-right: 2px solid #b968c7; /* Simulates a typing cursor */
+  animation: typing 4s steps(30, end) infinite, blink 0.5s step-end infinite;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Full text width */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Makes the cursor blink */
+  }
+}
+
 
 .content p {
   font-size: 1.2rem;
@@ -106,7 +132,7 @@
 }
 
 .expertise-card:hover {
-  background: white;
+  background: #353E43;
   color: #b968c7;
   border: #b968c7;
   transform: scale(1.03);
@@ -124,6 +150,7 @@
   font-size: 1rem;
   color: #cccccc;
 }
+
 
 /* Call-to-Action Section */
 .cta-section {
