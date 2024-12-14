@@ -1,30 +1,49 @@
 import emailjs from '@emailjs/browser';
-import { default as React, useRef } from 'react';
+import { default as React, useState } from 'react';
 import './contact.css';
 
 
 const Contact = () => {
 
-  const form = useRef();
+const [name, setName] = useState('');
+const [email, setEmail] = useState('');
+const [message, setMessage] = useState('');
+const [notification, setNotification] = useState(null);
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    emailjs
-      .sendForm('service_cq17t1r', 'template_9sm9fu7', form.current, {
-        publicKey: 'GOfIQoCq4XhU6VrS3',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+
+  //Email details
+  const serviceId = "service_cq17t1r";
+  const templateId = "template_9sm9fu7";
+  const publicKey = "GOfIQoCq4XhU6VrS3";
+
+  
+  //an object that contains dynamic template parameters
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    to_name: "Innoverxia",
+    message: message,
   };
 
 
+  // Send the email using emailJS
+  emailjs.send(serviceId, templateId, templateParams, publicKey)
+    .then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      setNotification({ type: 'success', message: 'Message sent successfully!' });
+      setName('');
+      setEmail('');
+      setMessage('');
+    },
+    (error) => {
+      console.log('FAILED...', error);
+      setNotification({ type: 'error', message: 'Failed to send the message. Please try again later.' });
+    },
+  );
+}
 
   return (
     <div className="contact-container">
@@ -84,21 +103,46 @@ const Contact = () => {
         </div>
       </div>
 
+
+      {/* Notification Section */}
+      {notification && (
+        <div className={`notification ${notification.type}`}>
+          {notification.message}
+        </div>
+      )}
+
       {/* Message Form */}
       <div className="contact-form">
         <h3>Send Us a Message</h3>
-        <form ref={form} onSubmit={sendEmail}>
+        <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your full name" aria-label="Enter your full name" required />
+            <input 
+              type="text"
+              placeholder="Enter your full name"
+              value={name} 
+              onChange={(e) => setName(e.target.value)}
+              aria-label="Enter your full name" required
+              />
           </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email address" aria-label="Enter your email address" required />
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)}
+                aria-label="Enter your email address" required
+                 />
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Enter your message" aria-label="Enter your message" required></textarea>
+            <textarea
+              rows="5" 
+              placeholder="Enter your message"
+              value={message} 
+              onChange={(e) => setMessage(e.target.value)}
+              aria-label="Enter your message" required></textarea>
           </div>
           <button type="submit" className="submit-button">Send Message</button>
         </form>
