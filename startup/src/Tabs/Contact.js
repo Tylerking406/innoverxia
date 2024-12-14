@@ -1,7 +1,31 @@
-import React from 'react';
-import './contact.css'; // Custom CSS file
+import emailjs from '@emailjs/browser';
+import { default as React, useRef } from 'react';
+import './contact.css';
+
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_cq17t1r', 'template_9sm9fu7', form.current, {
+        publicKey: 'GOfIQoCq4XhU6VrS3',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
+
   return (
     <div className="contact-container">
       <h2>Contact <span className="highlight">Innovexia</span></h2>
@@ -63,7 +87,7 @@ const Contact = () => {
       {/* Message Form */}
       <div className="contact-form">
         <h3>Send Us a Message</h3>
-        <form>
+        <form ref={form} onSubmit={sendEmail}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input type="text" id="name" placeholder="Enter your full name" aria-label="Enter your full name" required />
