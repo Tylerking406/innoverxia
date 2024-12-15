@@ -8,12 +8,12 @@ const Home = () => {
       {/* Main Content Section */}
       <div className="content">
         <h1>
-          <i className="fas fa-lightbulb"></i> Hi There! 👋
+           Hi There! 
         </h1>
         <h2>
           We are <span className="highlight">Innovexia</span>
         </h2>
-        <h4>Innovating the future, one solution at a time</h4>
+        <h4 className="textAnimate">Innovating the future,<span className="typingPart"> one solution at a time</span></h4>
         <p>Developer | Designer | Creator</p>
       </div>
 

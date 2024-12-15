@@ -1,9 +1,10 @@
 /* Contact Container */
 .contact-container {
     padding: 50px;
-    background-color: #121212; /* Black background */
+    background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
     color: #ffffff; /* White text */
     text-align: center;
+    
   }
   
   .contact-container h2 {
@@ -28,15 +29,23 @@
     justify-content: center;
     gap: 20px;
     margin-bottom: 40px;
+
   }
   
   .contact-card {
-    background-color: #1f1f1f;
+    
     padding: 20px;
     border-radius: 10px;
     width: 300px;
     text-align: left;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px whitesmoke;
+    
+  }
+
+  .contact-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 5px #b968c7;
   }
   
   .contact-card h3 {
@@ -75,6 +84,7 @@
   
   .form-group {
     margin-bottom: 20px;
+    
   }
   
   .form-group label {
@@ -92,6 +102,7 @@
     border-radius: 5px;
     background-color: #1f1f1f;
     color: #ffffff;
+    box-shadow: 0 0 5px white;
   }
   
   .form-group textarea {
@@ -110,8 +121,10 @@
   }
   
   .submit-button:hover {
-    background-color: #e57373;
+    background-color: #333;
+    box-shadow: 0 0 25px #b968c7;
     transform: scale(1.05);
+    
   }
   
   .contact-card i {
