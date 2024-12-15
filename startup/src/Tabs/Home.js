@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import developerSVG from '../Assets/bg.svg'; // Path to your SVG file
 import './Home.css'; // Custom CSS for the homepage
 
 const Home = () => {
+
+
+  const texts = [
+    "Innovating the future, one solution at a time.  ",
+    "Empowering creativity, one project at a time.  ",
+    "Transforming industries, one idea at a time.  ",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const typingDuration = 4000; // Duration of typing animation (4s)
+    const pauseDuration = 1000; // Pause after the full text is displayed (1s)
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, typingDuration + pauseDuration); // Add typing + pause durations
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [texts.length]);
+
+
   return (
     <div className="home-container">
       {/* Main Content Section */}
@@ -13,7 +35,9 @@ const Home = () => {
         <h2>
           We are <span className="highlight">Innovexia</span>
         </h2>
-        <h4 className="textAnimate">Innovating the future,<span className="typingPart"> one solution at a time</span></h4>
+        <h4 key={currentIndex} className="textAnimate">
+        {texts[currentIndex]}
+      </h4>
         <p>Developer | Designer | Creator</p>
       </div>
 

@@ -34,27 +34,26 @@
   margin-bottom: 20px;
 }
 .textAnimate {
-  font-size: 1.5rem; /* Adjust size as needed */
+  font-size: 1.5rem;
   color: #b968c7;
-  overflow: hidden; /* Ensures no text goes outside the container */
-  white-space: nowrap; /* Prevents text from wrapping to a new line */
-  border-right: 2px solid #b968c7; /* Simulates a typing cursor */
-  animation: typing 4s steps(30, end) infinite, blink 0.5s step-end infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #b968c7;
+  animation: typing 4s steps(30, end), blink 0.5s step-end infinite;
 }
-
 
 @keyframes typing {
   from {
     width: 0;
   }
   to {
-    width: 100%; /* Full text width */
+    width: 100%;
   }
 }
 
 @keyframes blink {
   50% {
-    border-color: transparent; /* Makes the cursor blink */
+    border-color: transparent;
   }
 }
 
