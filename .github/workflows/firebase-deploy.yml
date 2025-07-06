@@ -34,3 +34,4 @@ jobs:
           channelId: live
           # 👇 This is the key part:
           entryPoint: ./startup
+#done
