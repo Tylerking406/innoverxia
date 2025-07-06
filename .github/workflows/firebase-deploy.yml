@@ -20,9 +20,11 @@ jobs:
 
       - name: 📥 Install Dependencies
         run: npm install
+        working-directory: ./startup
 
       - name: 🛠️ Build Project
         run: npm run build
+        working-directory: ./startup
 
       - name: 🚀 Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
@@ -30,3 +32,5 @@ jobs:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ secrets.FIREBASE_TOKEN }}"
           channelId: live
+          # 👇 This is the key part:
+          entryPoint: ./startup
