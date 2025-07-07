@@ -6,9 +6,17 @@ const Footer = () => {
   return (
     <footer className='footer'>
         <div className="footer-bg">
+        <div className="image-combo">
+        <div>
+        <img src='logo.png' />
+        </div>
+        <div>
         <h3 className="footer-title">
            Innoverxia 
         </h3>
+        </div>
+        </div>    
+        
     <div className="footer-container">
         
       <div className="footer-content">

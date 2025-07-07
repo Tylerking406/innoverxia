@@ -14,6 +14,19 @@
    text-align: center; 
    color: #208dbe;
 }
+.image-combo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image-combo img{
+    width: auto;
+    height: 3em;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(32, 141, 190, 0.5);
+    transition: transform 0.3s ease;
+}
 .footer-bg{
     background: #222121;
     padding: 20px;
@@ -34,4 +47,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    text-decoration: none;
+}
+.footer-bottom{
+    text-align: center;
 }

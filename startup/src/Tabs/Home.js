@@ -50,15 +50,15 @@ const Home = () => {
       <div className="about-section">
         <h3>About Us</h3>
         <p>
-          Innovexia is a forward-thinking tech company dedicated to crafting solutions
-          that empower businesses and individuals. We specialize in innovation, ensuring that
+          <span className='highlight'>Innovexia</span> is a forward-thinking tech company dedicated to crafting solutions
+          that empower businesses and individuals. We specialize in <span className='highlight'>innovation</span>, ensuring that
           every project we undertake not only meets but exceeds expectations.
         </p>
       </div>
 
       {/* Expertise Section */}
       <div className="expertise-section">
-        <h3>Our Expertise</h3>
+        <h3><span className='highlight'>Our Key </span>Expertise</h3>
         <div className="expertise-cards">
           {/* Expertise Card 1 */}
           <div className="expertise-card">
@@ -102,7 +102,7 @@ const Home = () => {
       <div className="cta-section">
         <h3>Ready to Transform Your Ideas?</h3>
         <p>
-          Let Innovexia bring your vision to life with innovative solutions tailored to your goals.
+          Let <span className='highlight'> Innovexia</span> bring your vision to life with innovative solutions tailored to your goals.
         </p>
         {/* <button
           className="cta-button"
