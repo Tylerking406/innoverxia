@@ -26,7 +26,7 @@ const Footer = () => {
         </h3>
         <ul className='footer-links'>
             <li>
-                <a href='/Home'>About Us</a>
+                <a href='/'>About Us</a>
             </li>
             <li>
                 <a href='/Services'>Services</a>
