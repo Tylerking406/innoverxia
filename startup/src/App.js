@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import Contact from './Tabs/Contact';
 import Home from './Tabs/Home';
 import Services from './Tabs/Services';
+import Footer from './Tabs/Footer';
 import './dark.css';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
